@@ -129,8 +129,8 @@
                 <li><a href="about">About Us</a></li>
                 <li><a href="services">Services</a></li>
                 <li><a href="contact">Contact Us</a></li>
-                <li><a href="login">Admin Login</a></li>
-                <li><a href="feedback">Feedback</a></li> <!-- Corrected closing tag -->
+                <li><a href="login">Login</a></li> <!-- Ensure this path is correct -->
+                <li><a href="signup">Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -141,13 +141,13 @@
         <div class="feedback-form">
             <form action="submitFeedback" method="post"> <!-- Update action with your servlet or endpoint -->
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
                 <label for="message">Feedback Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Your feedback here..." required></textarea>
 
                 <button type="submit">Submit Feedback</button>
             </form>

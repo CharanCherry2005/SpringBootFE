@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Smart City Portal</title>
+    <title>Report Issues - Smart City Portal</title>
     <style>
         /* General Styling */
         body {
@@ -15,8 +15,9 @@
             flex-direction: column;
             min-height: 100vh; /* Ensure full height for footer positioning */
         }
-        h1, h2, h3 {
+        h1, h2 {
             color: #2c3e50;
+            text-align: center;
         }
         a {
             color: #3498db;
@@ -37,7 +38,6 @@
         }
         .logo {
             width: 50px; /* Adjust logo size as needed */
-            height: auto; /* Maintain aspect ratio */
         }
         nav ul {
             list-style-type: none;
@@ -64,24 +64,15 @@
         /* Main Content */
         main {
             padding: 20px;
-            text-align: center;
             flex: 1; /* Allow main to grow and take available space */
         }
-        .intro {
-            margin-bottom: 40px;
-        }
-        .services {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .service-item {
+        .report-issue-form {
+            max-width: 600px;
+            margin: 0 auto;
             background-color: #ecf0f1;
             padding: 20px;
             border: 1px solid #bdc3c7;
             border-radius: 5px;
-            width: 250px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -108,7 +99,7 @@
     <!-- Header Section -->
     <header>
         <img src="images/scb.jpg" alt="Logo" class="logo"> <!-- Update with your logo path -->
-        <h1>Welcome to the Smart City Portal</h1>
+        <h1>Report Issues</h1>
         <nav>
             <ul>
                 <li><a href="home">Home</a></li>
@@ -123,32 +114,26 @@
 
     <!-- Main Content Section -->
     <main>
-        <section class="intro">
-            <h2>Your City, Our Responsibility</h2>
-            <p>Welcome to the Smart City Portal. Here, you can access information, report issues, and provide feedback to help us build a better community for everyone.</p>
-        </section>
-
-        <section class="services">
-            <h2>Explore Our Services</h2>
-            <div class="service-item">
-                <a href="cityinfo" style="text-decoration: none; color: inherit;">
-                    <h3>City Information</h3>
-                    <p>Find essential details and updates about our city’s infrastructure, services, and upcoming events.</p>
-                </a>
-            </div>
-            <div class="service-item">
-                <a href="reportIssues" style="text-decoration: none; color: inherit;"> <!-- Updated Link -->
-                    <h3>Report Issues</h3>
-                    <p>Let us know about any issues in the city so we can work together to resolve them.</p>
-                </a>
-            </div>
-            <div class="service-item">
-                <a href="feedback" style="text-decoration: none; color: inherit;">
-                    <h3>Feedback</h3>
-                    <p>Share your feedback and help us make informed decisions for a better city experience.</p>
-                </a>
-            </div>
-        </section>
+        <h2>Report an Issue</h2>
+        <div class="report-issue-form">
+            <form action="/submitIssue" method="post">
+                <div>
+                    <label for="issueTitle">Issue Title:</label>
+                    <input type="text" id="issueTitle" name="issueTitle" required>
+                </div>
+                <div>
+                    <label for="issueDescription">Description:</label>
+                    <textarea id="issueDescription" name="issueDescription" rows="5" required></textarea>
+                </div>
+                <div>
+                    <label for="issueLocation">Location:</label>
+                    <input type="text" id="issueLocation" name="issueLocation" required>
+                </div>
+                <div>
+                    <button type="submit">Submit Issue</button>
+                </div>
+            </form>
+        </div>
     </main>
 
     <!-- Footer Section -->

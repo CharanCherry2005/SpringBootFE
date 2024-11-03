@@ -98,8 +98,8 @@
                 <li><a href="home">Home</a></li>
                 <li><a href="about">About Us</a></li>
                 <li><a href="services">Services</a></li>
-                <li><a href="contact">Contact Us</a></li>
-                <li><a href="login">Admin Login</a></li>
+                <li><a href="login.jsp">Login</a></li> <!-- Login button in navbar -->
+                <li><a href="signUp.jsp">Sign Up</a></li>
             </ul>
         </nav>
     </header>
